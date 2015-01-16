@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>
+        Vikene</title>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0,initial-scale=1.0, user-scalable=yes">
+        <script src="http://www.polymer-project.org/components/webcomponentsjs/webcomponents.js" ></script>
+        <link rel="import" href="http://www.polymer-project.org/components/font-roboto/roboto.html">
+        <link rel="import"
+  href="http://www.polymer-project.org/components/core-header-panel/core-header-panel.html">
+<link rel="import"
+  href="http://www.polymer-project.org/components/core-toolbar/core-toolbar.html">
+<link rel="import"
+  href="http://www.polymer-project.org/components/paper-tabs/paper-tabs.html">
+        <link rel="import" 
+  href="http://www.polymer-project.org/components/polymer/polymer.html">
+<link rel="import" 
+  href="http://www.polymer-project.org/components/core-icon-button/core-icon-button.html">
+        <link rel="import" href="http://vigneashsundar.in/post-card.html">
+        <style>
+        html,body {
+  height: 100%;
+  margin: 0;
+  background-color: #E5E5E5;
+  font-family: 'RobotoDraft', sans-serif;
+}
+core-header-panel {
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+core-toolbar {
+  background: #673AB7;
+  color: white;
+}
+#tabs {
+  width: 100%;
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-transform: uppercase;
+}
+        
+        </style>
+    </head>
+    <body unresolved>
+    <core-header-panel>
+        <core-toolbar>
+            <paper-tabs id="tabs" selected="all" self-end>
+    <paper-tab name="Home">Home</paper-tab>
+    <paper-tab name="About">About</paper-tab>
+                <paper-tab name="Contact">Contact</paper-tab>
+  </paper-tabs>
+        </core-toolbar>
+        <div class="container" layout vertical center>
+
+  <post-card>
+    
+    <h2>Heya! </h2>
+    <p>Thanks for landing :).. Still figuring out Routes :P </p>
+  </post-card>
+  
+</div>
+        </core-header-panel>
+
+        <script>
+  var tabs = document.querySelector('paper-tabs');
+
+  tabs.addEventListener('core-select', function() {
+    console.log("Selected: " + tabs.selected);
+  });
+</script>
+    </body>
+</html>
