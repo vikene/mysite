@@ -5,10 +5,29 @@ html
         script(type='text/javascript',src='/js/session.js')
         script(type='text/javascript')
             | check_user_session()
+            | var dd = "#{sessionName}"
             
        
     body
         h1 
             | Post Up
             
-        
+        form(method='post',action='blog_it')
+            label
+                | Headline
+            input(type="text",name="heading")
+            br
+            br
+            label
+                | Content
+            textarea(name="content",cols="40",rows="10")
+            br
+            br
+            label
+                | tags
+            input(type="text",name="tags")
+            br
+            br
+            input(type="text",value="#{sessionName}",name="session")
+            input(type="text",value="#{sessionUser}", name="user")
+            input(type="submit", value="submit")

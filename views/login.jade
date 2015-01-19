@@ -14,21 +14,24 @@ html(lang="en")
 
 
     link(href="/stylesheet/signin.css",rel="stylesheet")
+    script(type='text/javascript',src='/js/session.js')
+    script(type='text/javascript')
+        |   check_user()
 
 
   body
 
     div(class="container")
 
-      form(class="form-signin")
+      form(class="form-signin", method="post" action="/validate" )
         h2(class="form-signin-heading")
             | Please sign in
         label(for="inputEmail",class="sr-only")
             | Email address
-        input(type="email",id="inputEmail" ,class="form-control" ,placeholder="Email address" required, autofocus)
+        input(type="email",id="inputEmail",name="email" ,class="form-control" ,placeholder="Email address" required, autofocus)
         label(for="inputPassword" ,class="sr-only")
             | Password
-        input(type="password" id="inputPassword", class="form-control", placeholder="Password", required)
+        input(type="password" id="inputPassword",name="password", class="form-control", placeholder="Password", required)
         div(class="checkbox")
             label
                 | Remember Me
