@@ -15,15 +15,16 @@ html
                     | #{status}
         
         div(id="content")
-            section(id="post")
-                div(id="post_head")
-                    | Hellow WorldHellow WorldHellow WorldHellow World
-                div(id="post_content")
-                    | Heyaaaaaaaaaaaa
-                div(id="post_tags")
-                    | #check ,#working,#test,#case
-                    div(id="like")
-                        | Like
+            each blog, i in bloglist
+                section(id="post")
+                    div(id="post_head")
+                        | #{blog.headling}
+                    div(id="post_content")
+                        | #{blog.content}
+                    div(id="post_tags")
+                        | #{blog.tags}
+                        div(id="like")
+                            | #{blog.like}
                 
                 
         

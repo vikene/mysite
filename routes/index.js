@@ -12,9 +12,10 @@ router.get('/',function(req,res){
         {
             buffer[doc.length-1] = doc[i];
         }
+        res.render('index',{"title":"Vikene's Blog","status":"Offline","bloglist":doc});
     
     })
-res.render('index',{title:"Vikene's Blog",status:"Offline",bloglist:buffer});
+
 
 })
 
