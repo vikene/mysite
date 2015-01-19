@@ -9,7 +9,7 @@ function check_user()
     }
     else{
     
-            window.location.replace("http://localhost:5000/post");
+            window.location.replace("http://vigneashsundar.in/post");
     }
     
 }
@@ -20,7 +20,7 @@ function check_user_session()
     if(check==null)
     {
         
-        window.location.replace("http://localhost:5000/login");
+        window.location.replace("http://vigneashsundar.in/login");
     }
     else{
     
@@ -42,5 +42,5 @@ function set_session()
 
 function redirect_user()
 {
-    window.location.replace("http://localhost:5000/post")
+    window.location.replace("http://vigneashsundar.in/post")
 }
