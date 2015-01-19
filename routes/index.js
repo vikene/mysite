@@ -20,5 +20,15 @@ router.get('/',function(req,res){
 
 })
 
+router.get('/login',function(req,res){
+    res.render('login',{title:"Login to access the server !",user:"java"})
+
+})
+
+router.get('/post',function(req,res){
+    res.render('post',{title:"Post up .."})
+
+})
+
 
 module.exports = router;
