@@ -6,7 +6,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('mongodb://java:radha@ds061360.mongolab.com:61360/front_stab');
+var db = monk('mongodb://test:apple@ds061360.mongolab.com:61360/front_stab');
 var routes = require('./routes/index');
 var app = express()
 
