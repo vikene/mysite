@@ -6,13 +6,14 @@ router.get('/',function(req,res){
     var db = req.db;
     var collection = db.get('blog');
     collection.find({},function(err,doc){
-        var buffer = doc.length;
-    
-        for(var i =0;i<doc.length;i++)
+        var buffer = new Array(doc.length);
+        var j=0;
+        for(var i =doc.length-1;i>=0;i--)
         {
-            buffer[doc.length-1] = doc[i];
+            buffer[j] = doc[i];
+            j++;
         }
-        res.render('index',{"title":"Vikene's Blog","status":"Offline","bloglist":doc});
+        res.render('index',{"title":"Vikene's Blog","status":"Offline","bloglist":buffer});
     
     })
 
