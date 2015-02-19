@@ -1,13 +1,10 @@
-/*!
- * Clean Blog v1.0.0 (http://startbootstrap.com)
- * Copyright 2014 Start Bootstrap
- * Licensed under Apache 2.0 (https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE)
- */
+
 
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 20px;
   color: #404040;
+    
 }
 p {
   line-height: 1.5;
@@ -134,8 +131,8 @@ hr.small {
 }
 .intro-header {
   background-color: #808080;
-  background: no-repeat center center;
-  background-attachment: scroll;
+  background: no-repeat center center fixed;
+ position: relative;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
