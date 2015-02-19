@@ -65,50 +65,25 @@ body
                     li
                         a(href="/contact")
                             | Contact
-            
-    header(class="intro-header",style="background-image: url('img/home-bg.jpg')")
-                 div(class="container")
-                     div(class="row")
-                         div(class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1")
-                             div(class="site-heading")
-                                 h1
-                                     | Vikene 
-                                 hr(class="small")
-                                 span(class="subheading")
-                                     | Scientist, anthropologist, Technocrat
-       
-     div(class="container")
-        
-        div(class="row")
-            div(class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1")
-                each blog, i in bloglist
-                    div(class="post-preview")
-                        a(href="/viewpost?name=#{blog._id}")
-                            h2(class="post-title")
-                                | #{blog.headling}
-                                
-                        
-                            h3(class="post-subtitle")
-                                | #{blog.content}
-                        
-                    
-                        p(class="post-meta")
-                            | Posted by 
-                            a(href="#")
-                                | #{blog.author} on #{blog.date}
+    header(class="intro-header",style="background: #9C27B0")
+        div(class="container")
+            div(class="row")
+                div(class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1")
+                    div(class="site-heading")
+                        h1
+                            | #{headling}
                             
-                        hr
-                
-                
-                hr
-               
-                ul(class="pager")
-                    li(class="next")
-                        a(href="#")
-                            | Older Posts &rarr;
-                    
-          
-          
+
+    
+    article
+        div(class="container")
+            div(class="row")
+                div(class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1")
+                    | #{content}   
+   
+
+    hr
+
     footer
         div(class="container")
             div(class="row")
@@ -145,6 +120,4 @@ body
     
     script(src="js/clean-blog.min.js")
 
-        
-                
         

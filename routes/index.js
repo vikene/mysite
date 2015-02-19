@@ -102,8 +102,8 @@ router.get('/viewpost',function(req,res){
     
         if(doc[0] != null)
         {
-            console.log(doc[0].content);
-            res.send("UnderConstruction!");
+            //console.log(doc[0].content);
+            res.render("viewpost.jade",{"title":"Vikene's Blog","headling":doc[0].headling,"content":doc[0].content});
         }
        
     })
