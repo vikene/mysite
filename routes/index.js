@@ -88,5 +88,16 @@ router.post('/blog_it',function(req,res){
         
 })
 
+router.get('/sorry',function(req,res){
+
+    res.render("sorry",{});
+    console.log("madhu logged");
+
+})
+
+router.get('/postd',function(req,res){
+    console.log(req.param("name"))
+    res.redirect('/')
+})
 
 module.exports = router;
