@@ -95,9 +95,18 @@ router.get('/sorry',function(req,res){
 
 })
 
-router.get('/postd',function(req,res){
-    console.log(req.param("name"))
-    res.redirect('/')
+router.get('/viewpost',function(req,res){
+    var db = req.db;
+    var collection = db.get("blog");
+    collection.find({"_id":req.param("name")},function(err,doc){
+    
+        if(doc[0] != null)
+        {
+            console.log(doc[0].content);
+            res.send("UnderConstruction!");
+        }
+       
+    })
 })
 
 module.exports = router;

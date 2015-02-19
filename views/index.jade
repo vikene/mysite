@@ -83,9 +83,10 @@ body
             div(class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1")
                 each blog, i in bloglist
                     div(class="post-preview")
-                        a(href="/postd?name=#{blog.headling}")
+                        a(href="/viewpost?name=#{blog._id}")
                             h2(class="post-title")
                                 | #{blog.headling}
+                                
                         
                             h3(class="post-subtitle")
                                 | #{blog.content}
@@ -94,8 +95,8 @@ body
                         p(class="post-meta")
                             | Posted by 
                             a(href="#")
-                                | #{blog.author}
-                            |on #{blog.date}
+                                | #{blog.author} on #{blog.date}
+                            
                         hr
                 
                 
@@ -108,7 +109,32 @@ body
                     
           
           
-               
+    footer
+        div(class="container")
+            div(class="row")
+                div(class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1")
+                    ul(class="list-inline text-center")
+                        li
+                            a(href="#")
+                                span(class="fa-stack fa-lg")
+                                    i(class="fa fa-circle fa-stack-2x")
+                                    i(class="fa fa-twitter fa-stack-1x fa-inverse")
+                          
+                        li
+                            a(href="#")
+                                span(class="fa-stack fa-lg")
+                                    i(class="fa fa-circle fa-stack-2x")
+                                    i(class="fa fa-facebook fa-stack-1x fa-inverse")
+                          
+                        li
+                            a(href="#")
+                                span(class="fa-stack fa-lg")
+                                    i(class="fa fa-circle fa-stack-2x")
+                                    i(class="fa fa-github fa-stack-1x fa-inverse")
+                         
+                         p(class="copyright text-muted")
+                            | Copyright &copy; Vigneash Sundar 2014
+                   
      
 
     script(src="js/jquery.js")
