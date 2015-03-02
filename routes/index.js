@@ -12,6 +12,7 @@ router.get('/',function(req,res){
         for(var i =doc.length-1;i>=0;i--)
         {
             buffer[j] = doc[i];
+            buffer[j].content = doc[i].content.substring(0,100)+ " Read More >>";
             j++;
         }
         res.render('index',{"title":"Vikene's Blog","status":"Offline","bloglist":buffer});
