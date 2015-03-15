@@ -101,6 +101,11 @@ router.get('/os_dev', function(req,res){
     res.render("os_index",{title:"Vikene Os dev blog"})
 })
 
+router.get('/boot_seq', function(req,res){
+    
+    res.render("boot_seq",{title:"Vikene Os dev Blog"})
+})
+
 router.get('/viewpost',function(req,res){
     var db = req.db;
     var collection = db.get("blog");
