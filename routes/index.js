@@ -102,8 +102,27 @@ router.get('/os_dev', function(req,res){
 })
 
 router.get('/boot_seq', function(req,res){
+    var db = req.db;
+    var collection = db.get("count");
+   // var json_obj;
+    collection.find({}, function(err,doc){
+        if(doc[0]!=null)
+        {
+            var dat = parseInt(doc[0].pgcount) +1;
+            
+            var json_obj ={ "pgcount": dat };
+            collection.update({},{"pgcount":dat});
+            console.log(json_obj)
+        }
+        else{
+            collection.insert({"pgcount":0}) //init database
+        }
     
+    })
     res.render("boot_seq",{title:"Vikene Os dev Blog"})
+    
+    
+    
 })
 
 router.get('/viewpost',function(req,res){
