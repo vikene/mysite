@@ -9,7 +9,7 @@ function check_user()
     }
     else{
     
-            window.location.replace("http://vigneashsundar.in/post");
+            window.location.replace("http://vigneashsundar.in:8080/post");
     }
     
 }
@@ -20,7 +20,7 @@ function check_user_session()
     if(check==null)
     {
         
-        window.location.replace("http://vigneashsundar.in/login");
+        window.location.replace("http://vigneashsundar.in:8080/login");
     }
     else{
     
