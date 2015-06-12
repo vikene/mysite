@@ -42,5 +42,5 @@ function set_session()
 
 function redirect_user()
 {
-    window.location.replace("http://vigneashsundar.in/post")
+    window.location.replace("http://vigneashsundar.in:8080/post")
 }
