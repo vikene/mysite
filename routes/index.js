@@ -184,6 +184,26 @@ router.get('/viewpost',function(req,res){
     })
 })
 
+router.get('/signup',function(req,res){
+    
+    res.render("signup",{});
+
+})
+
+router.post('/signup',function(req,res){
+var db = req.db;
+    var collection = db.get('userCollection')
+    
+    var json_object ={
+            "email":req.body.email,
+               "password":req.body.password
+           
+           }
+    collection.insert(json_object)
+    res.redirect('/login')
+    
+})
+
 router.get('/delete',function(req,res){
     var db = req.db;
     var collection = db.get("blog");
