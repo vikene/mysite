@@ -32,6 +32,24 @@ function check_user_session()
     }
     
 }
+function check_user_session1()
+{
+    var check = window.sessionStorage.getItem("has_logged_in");
+    if(check==null)
+    {
+        
+        window.location.replace("http://vigneashsundar.in:8080/login");
+    }
+    else{
+    
+         console.log("Things are fine to GO dude")   
+         sessionName=sessionStorage.getItem("sessionName");
+         sessionUser=sessionStorage.getItem("sessionUser");
+        deletef();
+         
+    }
+    
+}
 
 function set_session()
 {
@@ -48,5 +66,6 @@ function redirect_user()
 function deletef()
 {
     alert("id to delete"+name);
+     window.location.replace("http://vigneashsundar.in:8080");
 }
 
