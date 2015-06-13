@@ -26,6 +26,7 @@ head
    
     script(src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js")
     script(src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js")
+    
    
 
 
@@ -71,7 +72,8 @@ body
                 div(class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1")
                     div(class="site-heading")
                         h1
-                            | #{headling}
+                            | #{headling} 
+                            
                             
 
     
@@ -80,6 +82,11 @@ body
             div(class="row")
                 div(class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1")
                      | #{content}   
+            div(class="row")
+                a(href="http://localhost:8080/post?name=#{deup}")
+                    | edit  
+                a(href="http://localhost:8080/delete?name=#{deup}")
+                    | delete
    
 
     hr

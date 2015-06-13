@@ -1,5 +1,6 @@
 var sessionName ;
 var sessionUser;
+
 function check_user()
 {
     var check = window.sessionStorage.getItem("has_logged_in");
@@ -44,3 +45,8 @@ function redirect_user()
 {
     window.location.replace("http://vigneashsundar.in:8080/post")
 }
+function deletef()
+{
+    alert("id to delete"+name);
+}
+
