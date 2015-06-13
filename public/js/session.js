@@ -65,7 +65,7 @@ function redirect_user()
 }
 function deletef()
 {
-    alert("id to delete"+name);
-     window.location.replace("http://vigneashsundar.in:8080");
+    
+     window.location.replace("http://vigneashsundar.in:8080/deletef?name="+name);
 }
 
